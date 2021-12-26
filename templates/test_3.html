@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKYPROGRAM search</title>
+  <link href="/static/css/styles.min.css" rel="stylesheet">
+</head>
+<body>
+<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ) ?>" >
+	<label class="screen-reader-text" for="s">Поиск: </label>
+	<input type="text" value="<?php echo get_search_query() ?>" name="s" id="s" />
+	<input type="submit" id="searchsubmit" value="найти" />
+</form>
+{% for l in list_2 %}
+                {% if i["pk"] == l["post_id"] %}
+                  {% numbers += 1 %}
+                {% endif %}
+              {% endfor %}
+</body>
+</html>
