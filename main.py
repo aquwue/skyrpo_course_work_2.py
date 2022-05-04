@@ -3,6 +3,7 @@ from functions import read_json, len_list, len_comments, get_posts, len_comments
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def main():
     list_1 = read_json("data/data.json")
